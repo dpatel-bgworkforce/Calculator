@@ -1,7 +1,9 @@
 .show-btn {
   display: grid;
   grid-template-columns: auto auto auto auto auto;
-  background-color: white;
+  background-color: grey;
+  /* height: fit-content;
+  width: fit-content; */
 }
 
 @media (min-width: 800px) {
@@ -11,57 +13,34 @@
   }
 }
 
-.equal {
-  grid-column-start: 4;
-  grid-column-end: 6;
-}
-
-.btn:last-child {
-  font-weight: medium;
-  font-size: 40px;
-  width: 110px;
-  height: 50px;
-  border-radius: 10px;
-  color: white;
-  background-color: #6dd5ed;
-}
-
 .clr {
-  color: #d66d75;
-}
-
-.exp {
-  color: #06beb6;
+  background-color: #FF8A80 !important;
 }
 
 .btn {
   width: 60px;
-  height: 60px;
-  margin: 6px auto;
-  font-size: 24px;
-  font-weight: 500;
+  height: 40px;
+  margin: 12px 10px 0;
+  font-size: 16px;
+  font-weight: 700;
   cursor: pointer;
-  border-radius: 50%;
+  border-radius: 2px;
   background: none;
   border: 0px;
   user-select: none;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.6);
 }
 
 @media (min-width: 800px) {
   .btn:hover {
-    background-color: #6dd5ed;
-    color: white;
-    transition: background-color 0.3s ease;
-    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.95);
+    color: rgba(0, 0, 0, 0.8);
   }
 
-  .btn:active,
-  .btn.touched {
-    background-color: #48b1bf;
-    color: white;
-    transition: background-color 0.3s ease;
-    border-radius: 50%;
-  }
+
 
   .btn:active {
     transform: scale(0.9);

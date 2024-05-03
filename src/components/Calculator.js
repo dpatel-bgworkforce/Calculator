@@ -130,18 +130,26 @@ function Calculator() {
     }
   };
 
+  // copy result to clipboard
+  const copyResult = () => {
+    navigator.clipboard.writeText(answer);
+  };
+
   return (
     <>
       <div className="container">
-        <div className="main">
-          <Display input={input} setInput={setInput} answer={answer} />
-          <Buttons
-            inputHandler={inputHandler}
-            clearInput={clearInput}
-            backspace={backspace}
-            changePlusMinus={changePlusMinus}
-            calculateAns={calculateAns}
-          />
+        <div className="wrapper">
+          <div className="main">
+            <Display input={input} setInput={setInput} answer={answer} />
+            <Buttons
+              inputHandler={inputHandler}
+              clearInput={clearInput}
+              backspace={backspace}
+              changePlusMinus={changePlusMinus}
+              calculateAns={calculateAns}
+              copyResult={copyResult}
+            />
+          </div>
         </div>
       </div>
     </>

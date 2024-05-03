@@ -16,6 +16,7 @@ const Display = ({ input, setInput, answer }) => {
         {answer === "" ? (
           <>
             <input
+              autoFocus
               type="text"
               name="input"
               className="input"
